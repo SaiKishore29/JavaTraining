@@ -8,11 +8,11 @@ public class Exno13 {
 		for(int i=0;i<5;i++) {
 			System.out.println("Enter Marks of Student"+(i+1));
 			for(int j=0;j<5;j++) {
-				System.out.println("Enter "+(j+1)+" mark:");
+				System.out.println("Enter Subject"+(j+1)+" mark:");
 				student[i][j]=scan.nextInt();
 			}
-			scan.close();
 		}
+		scan.close();
 		for(int i=0;i<5;i++) {
 			sum=0;
 			for(int j=0;j<5;j++) {
