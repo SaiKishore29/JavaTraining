@@ -3,22 +3,23 @@ package day5;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Exno3 {
+public class InventoryDemo {
 
 	public static void main(String[] args) {
-		ExecutorService es=Executors.newFixedThreadPool(2);
-		Inventory inv=new Inventory();
-		es.execute(()->{
-			Thread.currentThread().setName("Producer");
-			for(int i=0;i<3;i++)
-				inv.produce();
+		ExecutorService executorService=Executors.newFixedThreadPool(2);//creating 2 thread
+		Inventory inventory=new Inventory();
+		executorService.execute(()->{
+			//Thread.currentThread().setName("Producer");//one is producer
+			for(int i=0;i<3;i++) {
+				inventory.produce();
+			inventory.consume();}
 		});
-		es.execute(()->{
-			Thread.currentThread().setName("Consumer");
-			for(int i=0;i<3;i++)
-				inv.consume();
-		});
-		es.shutdown();
+		//es.execute(()->{
+		//	Thread.currentThread().setName("Consumer");//one is consumer
+			//for(int i=0;i<3;i++)
+				//inv.consume();
+		//});
+		executorService.shutdown();
 
 	}
 

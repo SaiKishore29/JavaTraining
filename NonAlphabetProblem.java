@@ -4,16 +4,16 @@ import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Exno6 {
+public class NonAlphabetProblem {
 
 	public static void main(String[] args) {
-		ExecutorService es=Executors.newFixedThreadPool(1);
-		CharacterCount cc=new CharacterCount();
-		es.execute(()->{
+		ExecutorService executionService=Executors.newFixedThreadPool(1);//creating 1 thread
+		CharacterCount characterCount=new CharacterCount();
+		executionService.execute(()->{
 			while(true)
-			cc.getChar();
+			characterCount.getChar();
 		});
-		es.shutdown();
+		executionService.shutdown();
 	}
 
 }
@@ -40,7 +40,7 @@ class CharacterCount{
 }
 class NonAlphabeticChar extends Exception{
 	public NonAlphabeticChar(String s) {
-		System.out.println(s);	
+		super(s);
 		}
 	
 }
