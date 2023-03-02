@@ -27,9 +27,15 @@ class Car{
 		// TODO Auto-generated method stub
 		return "Car[mechanicShed="+mechanicShed+"]";
 	}
+
+	interface Build{
+		Build setBrand(String brand);
+		Build setModel(String Model);
+		Build setEngine(String Engine);
+		Build setTire(String tire);
+	}
 	
-	
-	static class BuildCar{
+	static class BuildCar implements Build{
 		String brand,model,engine,tire;
 		public BuildCar setBrand(String brand) {
 			this.brand=brand;
