@@ -15,9 +15,9 @@ public class Command {
 		CommandClass serialcommand=new SerialChannelCommand(tv, sbox, ss, vgame);
 		CommandClass ttgamecommand=new TTGameCommand(tv, sbox, ss, vgame);
 		
-		universalRemote.assignCommand(1, ttgamecommand);
-		universalRemote.assignCommand(2, newscommand);
-		universalRemote.assignCommand(3, serialcommand);
+		universalRemote.assignCommand(0, ttgamecommand);
+		universalRemote.assignCommand(1, newscommand);
+		universalRemote.assignCommand(2, serialcommand);
 		System.out.println("Enter 1 for ttgame");
 		System.out.println("Enter 2 for News Channel");
 		System.out.println("Enter 3 for Serial Channel");

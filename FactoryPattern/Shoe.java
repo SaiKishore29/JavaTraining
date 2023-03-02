@@ -1,5 +1,5 @@
 package FactoryPattern;
 
-abstract class Shoe{
-	abstract void ShoeName();
+interface Shoe{
+	void ShoeName();
 }

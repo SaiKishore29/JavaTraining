@@ -1,9 +1,9 @@
 package StrategyPattern;
 
-class UPI extends PaymentMethod{
+class UPI implements PaymentMethod{
 
 	@Override
-	void pay() {
+	public void pay() {
 		System.out.println("Payment using UPI");
 	}
 	

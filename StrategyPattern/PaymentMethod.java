@@ -1,5 +1,5 @@
 package StrategyPattern;
 
-abstract class PaymentMethod{
-	abstract void pay();
+interface PaymentMethod{
+	void pay();
 }

@@ -1,9 +1,9 @@
 package FactoryPattern;
 
-class CasualShoe extends Shoe{
+class CasualShoe implements Shoe{
 
 	@Override
-	void ShoeName() {
+	public void ShoeName() {
 		System.out.println("Casual shoe");
 		
 	}

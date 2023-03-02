@@ -1,9 +1,9 @@
 package StrategyPattern;
 
-class DebitCard extends PaymentMethod{
+class DebitCard implements PaymentMethod{
 
 	@Override
-	void pay() {
+	public void pay() {
 		System.out.println("Payment using Debit card");
 	}
 	

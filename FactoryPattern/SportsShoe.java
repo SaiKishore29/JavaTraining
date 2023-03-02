@@ -1,7 +1,7 @@
 package FactoryPattern;
 
-class SportsShoe extends Shoe{
-	void ShoeName() {
+class SportsShoe implements Shoe{
+	public void ShoeName() {
 		System.out.println("Sports Shoe");
 	}
 }
